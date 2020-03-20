@@ -1,0 +1,20 @@
+<div class="container">
+<form class="form-group" [formGroup]="catForm" (ngSubmit)="insertCat()">
+    <label> Employee Name</label>
+    <input type="text" class="form-control" formControlName="empname">
+    <div *ngIf="this.catForm.controls['empname'].invalid && this.catForm.controls['empname'].touched" class="alert alert-danger">
+        Invalid input
+    </div>
+    <label> Employee Company Name</label>
+    <input type="text" class="form-control" formControlName="empcom">
+    <label> Employee Email ID</label>
+    <input type="text" class="form-control" formControlName="empemail">
+    <label> Employee Contact No</label>
+    <input type="text" class="form-control" formControlName="empcontact">
+    <label> Employee Designation</label>
+    <input type="text" class="form-control" formControlName="empdes">
+    <br>
+    <input type="submit" class ="btn btn-success" value="Insert Category">
+</form>
+
+</div>

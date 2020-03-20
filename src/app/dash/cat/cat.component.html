@@ -1,0 +1,27 @@
+<div class="container">
+    <table class="table table-bordered">
+        <tr>
+            <th>S. No.</th>
+            <th>Employee Name</th>
+            <th>Company Name</th>
+            <th>Email ID</th>
+            <th>Contact No</th>
+            <th>Designation</th>
+            <th>Action</th>
+
+        </tr>
+        <tr *ngFor="let data of catData; let i=index">
+            <td>{{i+1}}</td>
+            <td>{{data.EmpName}}</td>
+            <td>{{data.Company}}</td>
+            <td>{{data.EmailID}}</td>
+            <td>{{data.Contact}}</td>
+            <td>{{data.Designation}}</td>
+
+            <td>
+                <button class="btn btn-primary">Edit</button>&nbsp;&nbsp;
+                <button (click)="delete(data.$key)" class="btn btn-danger">Delete</button>
+            </td>
+        </tr>
+    </table>
+</div>
